@@ -1,0 +1,269 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+/* Navbar (Hamburger Menu for Mobile) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Change hamburger bars to 'X' when active */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background-color: #333;
+  padding: 20px;
+  position: absolute;
+  top: 60px; /* Below the navbar */
+  right: 0;
+  width: 100%;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 15px 0;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Show mobile menu when open */
+.mobile-menu.open {
+  display: block;
+}
+
+/* Hero Section */
+#hero {
+  /* background: url('hero-background.jpg') no-repeat center center/cover; */
+  height: 100vh;
+  background-color: #8b4513;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.25em;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: #ffdd00; /* Bengal Tiger Yellow */
+  color: #000; /* Panda Black */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-cta:hover {
+  background-color: #ffc107; /* Lighter Bengal Tiger Yellow */
+  color: #000;
+}
+
+/* Flow Section */
+#flow {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.flow-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.flow-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: space-between;
+}
+
+.flow-step {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  min-width: 250px; /* Ensures steps stack on small screens */
+  max-width: 100%; /* Ensures no overflow */
+}
+
+.flow-step img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.flow-step h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.flow-step p {
+  font-size: 1em;
+}
+
+/* Core Pillars Section */
+#pillars {
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.pillars-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows pillars to stack on mobile */
+}
+
+.pillar-item {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  min-width: 250px;
+}
+
+.pillar-item img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.pillar-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Technology Section */
+#technology {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.tech-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures the technology features stack on mobile */
+}
+
+.tech-feature {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  min-width: 250px;
+}
+
+.tech-feature img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.tech-feature h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Membership Section */
+#membership {
+  padding: 50px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#membership p {
+  font-size: 1.25em;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+#footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
